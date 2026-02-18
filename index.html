@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    /> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+
+    <!-- TOP BAR (ONLY CHOOSE BUTTON) -->
+    <div class="top-bar">
+        <label for="image-input" class="btn">
+            Choose Image
+            <input type="file" id="image-input" accept="image/*" hidden>
+        </label>
+    </div>
+
+    <!-- MIDDLE SECTION -->
+    <section class="editor">
+
+        <!-- LEFT -->
+        <div class="canvas-container">
+            <div class="placeholder">
+                <i class="ri-image-edit-line" id="defaultimg"></i>
+                <p>No Image Selected</p>
+            </div>
+            <canvas id="image-canvas"></canvas>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="filters-panel">
+            <h2>Filters</h2>
+            <div class="filters"></div>
+
+            <!-- RESET & DOWNLOAD BELOW FILTERS -->
+            <div class="action-buttons">
+                <button class="btn danger" id="reset-btn">Reset</button>
+                <button class="btn success" id="download-btn">Download</button>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- BOTTOM -->
+    <div class="presets-panel">
+        <h2>Presets</h2>
+        <div class="presets"></div>
+    </div>
+
+</main>
+<script src="main.js"></script>
+</body>
+</html>
