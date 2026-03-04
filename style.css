@@ -186,3 +186,55 @@ canvas{
     padding:6px 10px;
     text-transform: uppercase;
 }
+
+
+/* ================= MEDIA QUERIES ================= */
+
+@media screen and (max-width: 1024px) {
+    /* Allow the main page to scroll */
+    html, body {
+        overflow: auto; 
+    }
+
+    main {
+        height: auto; /* Let the content grow tall */
+    }
+
+    .editor {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    /* This makes the image stick to the top */
+    .canvas-container {
+        position: sticky;
+        top: 10px;        /* Distance from the very top */
+        z-index: 100;     /* Keeps it above other items */
+        background: #141e30; /* Matches your body background */
+        height: 350px;    /* Fixed height for the preview */
+        flex: none;
+        border-color: rgba(255,255,255,0.8); /* Make border brighter to see it */
+    }
+
+    .filters-panel {
+        flex: none;
+        padding-top: 20px;
+    }
+
+    .top-bar, .presets-panel {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+/* Extra small screens (Phones) */
+@media screen and (max-width: 600px) {
+    .canvas-container {
+        height: 250px; /* Smaller image area for phones */
+    }
+
+    .presets .btn {
+        flex: 1 1 40%; /* Two buttons per row */
+        margin-right: 5px;
+    }
+}
